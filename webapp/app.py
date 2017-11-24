@@ -21,13 +21,13 @@ def main():
   values = target.split(',')
 
   # Return an error if target is not in shape x,y
-  if len(values) != 4:
+  if len(values) != 8:
     return jsonify({'error': 'Please send "target" query parameter well formed. Example: ?target=0,1,2,3'})    
 
   # Returns value on get
   if request.method == 'GET':
     instance = SVM()
-    res = instance.predict(target = [values[0], values[1], values[2], values[3]])[0]
+    res = instance.predict(target = [values[0], values[1], values[2], values[3], values[4],values[5],values[6],values[7],values[8]])[0]
     return jsonify({'prediction': res})
   else:
     return jsonify({'status': 'ok'})

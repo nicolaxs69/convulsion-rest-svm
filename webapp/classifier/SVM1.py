@@ -27,12 +27,12 @@ class SVM():
         # [[1,2,3,4], [1,2,3,4]]
         self.X.append(arr)
       else: 
-        self.X.append([0,0,0,0])
+        self.X.append([0, 0, 0, 0, 0, 0, 0, 0])
 
       index=index+1
 
     # train the classifier
-    self.classifier = svm.SVC()    
+    self.classifier = svm.SVC(kernel='linear')    
     self.classifier.fit(self.X, self.y)
 
   def predict(self, target):
