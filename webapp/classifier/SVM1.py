@@ -23,7 +23,7 @@ class SVM():
     for row in csv.reader(csvStandardTraining, delimiter=';'):
       if index !=0:
         # 1;2;3;4 -> [1,2,3,4]
-        arr = list(map(int, [i.replace(".", "") for i in row]))
+        arr = list(map(int, [i.replace("", "") for i in row]))
         # [[1,2,3,4], [1,2,3,4]]
         self.X.append(arr)
       else: 
