@@ -27,7 +27,7 @@ def main():
   # Returns value on get
   if request.method == 'GET':
     instance = SVM()
-    res = instance.predict(target = [values[0], values[1], values[2], values[3], values[4],values[5],values[6],values[7],values[8]])[0]
+    res = instance.predict(target = [values[0], values[1], values[2], values[3], values[4],values[5],values[6],values[7])[0]
     return jsonify({'prediction': res})
   else:
     return jsonify({'status': 'ok'})
